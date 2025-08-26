@@ -1,14 +1,23 @@
 @echo off
 
+:: ===============================
+:: AutoGit - Automated Git Sync Tool (v1)
+:: Modes:
+::   hey        - run once now + add Startup shortcut (future runs at startup)
+::   bye        - run once now + shutdown
+::   set enableShutdown=true
+::   auto       - run once now + register Scheduled Task for recurring runs
+:: ===============================
+
 :: ============================================
 :: Enable delayed variable expansion
 :: ============================================
 setlocal enabledelayedexpansion
 
 :: ============================================
-:: Configurable Parameters
+:: Do Not Change Below
 :: ============================================
-call "F:\pFolder\utils\autoGit\config.bat"
+call "config.bat"
 
 :: ============================================
 :: Move to Working Directory
