@@ -23,13 +23,16 @@ The script supports **three modes**:
 ---
 
 ## ⚙️ Setup
-1. Clone or download this repository.  
-2. Edit the `config.json` file (see example below) to add your repositories:  
 
-```json
-{
-  "repos": [
-    "C:\\Users\\YourUser\\Projects\\repo1",
-    "C:\\Users\\YourUser\\Projects\\repo2"
-  ]
-}
+1. **Install Git**  
+   Ensure [Git for Windows](https://git-scm.com/download/win) is installed and available in PATH.
+
+2. **Download AutoGit**  
+   Clone the repository and navigate into it:
+   ```bash
+   git clone https://github.com/imakshat47/utils
+   cd utils/AutoGit
+   ```
+   Or place `autoGit.bat` and `config.bat` in a folder (e.g., `C:\Tools\AutoGit\`).
+
+Note: Refer ReadME file inside autoGit folder for full details.  
