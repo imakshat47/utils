@@ -12,12 +12,12 @@ set "rootPath=F:\pFolder"
 :: A friendly name for the device where AutoGit is running.
 :: Used to tag commits so you know which machine made the update.
 :: Eg: Laptop, Computer
-set "deviceName=<DeviceName>"
+set "deviceName=Laptop"
 
 :: Your username (local or GitHub/Git user).
 :: Also used in commit messages for tracking.
 :: Eg: ImAkshat47
-set "username=<UserName>"
+set "username=ImAkshat47"
 
 :: The default commit message format.
 :: You can include variables like %deviceName% and %username%.
@@ -26,7 +26,7 @@ set "defaultCommitMsg=Update from %deviceName% by %username%"
 
 :: Debug mode switch (true/false).
 :: When true → extra logs printed to help troubleshoot issues.
-set "debugMode=true"
+set "debugMode=false"
 
 :: Shutdown switch (true/false).
 :: When true → AutoGit will trigger a system shutdown after finishing.
