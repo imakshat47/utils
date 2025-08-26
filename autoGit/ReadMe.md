@@ -68,20 +68,23 @@ set DEBUG=true
 
 ## 📖 Examples
 
-### Example 1: Manual click Run
+### Example 1: Manual click Run:
+configure 'config.bat' 
 ```bat
-autoGit.bat 
+autoGit.bat
 ```
 This will sync all repositories once and exit.
 
 ### Example 2: Startup Sync
-Place AutoGit in Startup folder and configure:
+Place AutoGit in Startup folder and configure 'config.bat' :
 ```bat
-autoGit.bat hey
+autoGit.bat
+config.bat
 ```
 Your repos will always be up to date when Windows starts.
 
 ### Example 3: Shutdown Sync
+set enableShutdown=true
 ```bat
 autoGit.bat 
 config.bat
