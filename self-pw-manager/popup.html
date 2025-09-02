@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Password Manager</title>
+  <style>
+    body { font-family: sans-serif; width: 320px; padding: 10px; }
+    button { margin: 4px; }
+    input { margin: 4px 0; width: 100%; }
+    .entry { border: 1px solid #ccc; padding: 4px; margin: 4px 0; }
+  </style>
+</head>
+<body>
+  <div id="locked">
+    <h3>Unlock Vault</h3>
+    <input type="password" id="masterPassword" placeholder="Master password" />
+    <button id="unlockBtn">Unlock</button>
+    <button id="createVaultBtn">Create Vault</button>
+    <button id="exportBtn">Export (encrypted)</button>
+  </div>
+
+  <div id="unlocked" style="display:none;">
+    <h3>Vault</h3>
+    <button id="lockBtn">Lock</button>
+    <div id="entries"></div>
+    <h4>Add Entry</h4>
+    <input type="text" id="entryName" placeholder="Name" />
+    <input type="text" id="entryUser" placeholder="Username" />
+    <input type="text" id="entryUrl" placeholder="URL" />
+    <input type="text" id="entryPass" placeholder="Password" />
+    <button id="genBtn">Gen</button>
+    <button id="saveBtn">Save</button>
+  </div>
+
+  <script src="crypto.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

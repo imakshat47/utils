@@ -1,0 +1,12 @@
+{
+  "name": "self-password-manager",
+  "version": "1.0.0",
+  "description": "Local-first Chrome extension password manager (Manifest V3).",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/self-password-manager.git"
+  },
+  "keywords": ["chrome-extension", "password-manager", "manifest-v3", "crypto"]
+}
