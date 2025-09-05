@@ -17,7 +17,7 @@ setlocal enabledelayedexpansion
 :: ============================================
 :: Do Not Change Below
 :: ============================================
-call "config.bat"
+call "./config.bat"
 
 :: ============================================
 :: Move to Working Directory
