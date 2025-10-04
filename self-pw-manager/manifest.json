@@ -1,15 +1,26 @@
 {
   "manifest_version": 3,
-  "name": "Self Password Manager",
-  "version": "1.0",
-  "description": "A local-first password manager Chrome extension.",
-  "permissions": ["storage", "scripting", "clipboardWrite", "activeTab"],
-  "host_permissions": ["<all_urls>"],
+  "name": "SecureVault Password Manager",
+  "version": "2.0.0",
+  "description": "A secure, local-first password manager with smart auto-fill and session management.",
+  "permissions": [
+    "storage", 
+    "scripting", 
+    "clipboardWrite", 
+    "activeTab",
+    "tabs",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "background": {
     "service_worker": "service-worker.js"
   },
   "action": {
     "default_popup": "popup.html",
+    "default_title": "SecureVault - Secure Password Manager",
     "default_icon": {
       "16": "icons/icon-16.png",
       "48": "icons/icon-48.png",
@@ -24,7 +35,17 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content-script.js"]
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
