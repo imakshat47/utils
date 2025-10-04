@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Manager Fill Demo</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 320px; margin: 48px auto; background: #f9fafb; padding: 32px; border-radius: 10px; box-shadow: 0 4px 12px #0001; }
+    label { display: block; margin: 12px 0 4px; font-size: 15px; }
+    input { width: 100%; padding: 8px 10px; margin-bottom: 10px; border: 1px solid #dde3e7; border-radius: 5px; font-size: 14px; }
+    button { padding: 9px 18px; border: none; background: #2d59d9; color: #fff; font-size: 15px; border-radius: 6px; cursor: pointer; margin-top: 12px; }
+    .demo { margin-bottom: 22px; color: #607184; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="demo">Try using your extension’s fill function on this demo form:</div>
+  <form id="login-form">
+    <label for="username">Username or Email</label>
+    <input type="text" id="username" name="username" autocomplete="username">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" autocomplete="current-password">
+
+    <button type="submit">Sign In</button>
+  </form>
+</body>
+</html>
