@@ -97,21 +97,42 @@ for /d %%d in (*) do (
 )
 
 :: ============================================
-:: Completion Message and Optional Shutdown
+:: ✅ Completion Message, Logging & Optional Shutdown
 :: ============================================
+
+:: Capture end time for logging
+set "endtime=%time%"
+set "logfile=script_run_log.txt"
+
+:: Get current date-time stamp for log entry
+for /f "tokens=1-3 delims=/ " %%a in ("%date%") do (
+    set "rundate=%%a-%%b-%%c"
+)
+
+:: Append log entry
+echo [%rundate% %time%] Script completed successfully. >> "%logfile%"
+echo. >> "%logfile%"
+
+:: Console output
 echo.
-echo Script completed at %timestamp%.
+echo ==================================================
+echo Script completed at %rundate% %time%.
+echo Log entry added to %logfile%.
+echo ==================================================
 echo Closing in 3 seconds...
 timeout /t 3 >nul
 
+:: Optional system shutdown
 if /i "%enableShutdown%"=="true" (
     echo System will shut down in 5 seconds...
+    echo [%rundate% %time%] Shutdown triggered by script. >> "%logfile%"
     timeout /t 5 >nul
     shutdown /s /t 3
 ) else (
     echo Exiting in 5 seconds...
     timeout /t 5 >nul
 )
+
 
 endlocal
 exit \b
